@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sua Web Rádio</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (para os ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div class="player-card">
+            
+            <!-- Aúdio (escondido, controlado pelo JS) -->
+            <audio id="audio-player" src="https://stream.zeno.fm/41virxfygt0uv" preload="metadata"></audio>
+
+            <!-- Capa/Logo da Rádio -->
+            <div class="album-art-wrapper">
+                <img id="album-art" src="https://github.com/sypherOS-XXI/PHZ-MUSIC/blob/main/perfil.jpg?raw=true" alt="Logo da Rádio">
+            </div>
+
+            <!-- Informações da Rádio -->
+            <div class="track-info">
+                <h2 id="radio-title">Sua Web Rádio</h2>
+                <p id="now-playing">Ao Vivo</p>
+            </div>
+
+            <!-- Controles do Player -->
+            <div class="player-controls">
+                <button id="play-pause-btn" class="control-button play">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+
+            <!-- Controle de Volume -->
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="80" class="slider">
+                <i class="fas fa-volume-up"></i>
+            </div>
+
+        </div>
+
+        <!-- Links Sociais (Opcional) -->
+        <footer class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </footer>
+
+    </div>
+
+    <!-- Nosso JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
